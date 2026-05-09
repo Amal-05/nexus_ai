@@ -6,13 +6,12 @@
 
 Nexus AI is a high-fidelity, futuristic engineering study assistant designed to transform complex documents into interactive learning experiences.
 
-## ✨ Key Features
+## 📁 Project Structure
 
-- **Split-Screen AI Summary**: Deep analysis of engineering documents with formula extraction and exam tips.
-* **Interactive AI Chat**: Real-time study assistant with a futuristic confidence meter.
-* **Question Bank Generator**: Automated generation of practice questions based on your study material.
-* **Diagram Explainer**: Advanced vision-based analysis for technical engineering diagrams.
-* **Semester Planner**: Dynamic scheduler for engineering students.
+The project is structured as a monorepo with a dedicated frontend and backend:
+
+- **`/frontend`**: React 18 + Vite + Tailwind CSS v4. The user interface and client-side logic.
+- **`/backend`**: Node.js + Express + Gemini 1.5 Pro. The AI engine and document processing service.
 
 ## 🚀 Run Locally
 
@@ -24,18 +23,37 @@ Nexus AI is a high-fidelity, futuristic engineering study assistant designed to 
    cd nexus_ai
    ```
 
-2. **Install dependencies:**
+2. **Install all dependencies:**
    ```bash
-   npm install
-   cd server && npm install && cd ..
+   npm run install-all
    ```
 
 3. **Configure Environment:**
-   Set the `VITE_FIREBASE_API_KEY` and other variables in `.env` (Frontend) and `GEMINI_API_KEY` in `server/.env` (Backend).
+   * **Frontend**: Create `frontend/.env` with Firebase/Gemini keys.
+   * **Backend**: Create `backend/.env` with `GEMINI_API_KEY`.
 
-4. **Run the application:**
-   * **Frontend**: `npm run dev`
-   * **Backend**: `cd server && node index.js`
+4. **Run both services concurrently:**
+   ```bash
+   npm run dev
+   ```
+
+## 🌐 Hosting Instructions
+
+### Frontend (Vercel)
+1. Push your code to GitHub.
+2. Connect your repository to **Vercel**.
+3. Set the **Root Directory** to `frontend`.
+4. Add the following **Environment Variables**:
+   * `VITE_API_URL`: Your deployed backend URL (e.g., `https://nexus-backend.onrender.com`).
+   * (Add other Firebase keys as needed).
+
+### Backend (Render)
+1. Connect your repository to **Render** as a **Web Service**.
+2. Set the **Root Directory** to `backend`.
+3. Set the **Build Command** to `npm install`.
+4. Set the **Start Command** to `npm start`.
+5. Add the following **Environment Variables**:
+   * `GEMINI_API_KEY`: Your Google AI Studio key.
 
 ## 🛠️ Tech Stack
 
@@ -44,6 +62,3 @@ Nexus AI is a high-fidelity, futuristic engineering study assistant designed to 
 - **Icons**: Lucide React
 - **Backend**: Node.js, Express, Google Gemini 1.5 Pro
 - **Auth**: Firebase
-
----
-View your app in AI Studio: [https://ai.studio/apps/ec04f21e-7a1c-4328-8c96-1083b0ee172b](https://ai.studio/apps/ec04f21e-7a1c-4328-8c96-1083b0ee172b)
