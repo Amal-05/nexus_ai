@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="1200" height="475" alt="Nexus AI Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
   
   # 🌌 Nexus AI
   ### The Advanced Engineering Study OS
@@ -26,13 +26,13 @@
 The project is structured as a monorepo for seamless deployment:
 
 - **[`/frontend`](./frontend)**: React 19 + Vite + Tailwind CSS v4 + Framer Motion.
-- **[`/backend`](./backend)**: Node.js + Express + Google Gemini 1.5 Pro.
+- **[`/backend`](./backend)**: Node.js + Express + Gemini 1.5 Pro.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js (v18+)
-- Google AI Studio API Key (Gemini)
+- Gemini API Key
 - Firebase Project (for Authentication)
 
 ### 1. Clone & Install
@@ -53,7 +53,7 @@ VITE_API_URL=http://localhost:3001
 
 **Backend (`/backend/.env`):**
 ```env
-GEMINI_API_KEY=your_gemini_key
+GEMINI_API_KEY=your_key
 ```
 
 ### 3. Run Locally

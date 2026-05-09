@@ -167,7 +167,7 @@ export default function SettingsView() {
                       <InputGroup 
                         label="Custom API Key (Optional)" 
                         type="password" 
-                        placeholder="Enter your Google AI Studio key..."
+                        placeholder="Enter your Gemini API key..."
                         description="Provide your own key to bypass platform rate limits."
                       />
                     </div>
