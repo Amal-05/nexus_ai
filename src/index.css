@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-h: "Inter", sans-serif;
+  
+  --color-surface: #10131a;
+  --color-surface-dim: #10131a;
+  --color-surface-bright: #363941;
+  --color-surface-container-lowest: #0b0e15;
+  --color-surface-container-low: #191b23;
+  --color-surface-container: #1d2027;
+  --color-surface-container-high: #272a31;
+  --color-surface-container-highest: #32353c;
+  
+  --color-on-surface: #e1e2ec;
+  --color-on-surface-variant: #c2c6d6;
+  
+  --color-primary: #adc6ff;
+  --color-on-primary: #002e6a;
+  --color-primary-container: #4d8eff;
+  --color-on-primary-container: #00285d;
+  
+  --color-secondary: #d0bcff;
+  --color-on-secondary: #3c0091;
+  --color-secondary-container: #571bc1;
+  --color-on-secondary-container: #c4abff;
+  
+  --color-tertiary: #4cd7f6;
+  --color-on-tertiary: #003640;
+  --color-tertiary-container: #009eb9;
+  --color-on-tertiary-container: #002f38;
+  
+  --color-outline: #8c909f;
+  --color-outline-variant: #424754;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-container/60 backdrop-blur-xl border border-white/10;
+    @apply relative overflow-hidden;
+  }
+  
+  .glass-card::before {
+    content: "";
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
+  }
+
+  .primary-gradient {
+    @apply bg-gradient-to-br from-primary-container to-secondary-container;
+  }
+  
+  .ai-orb {
+    @apply bg-gradient-to-br from-tertiary to-tertiary-container shadow-[0_0_30px_rgba(76,215,246,0.3)];
+  }
+}
