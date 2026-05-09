@@ -10,7 +10,8 @@ import {
   ShieldCheck,
   Smartphone,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  X
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -76,6 +77,16 @@ export default function AuthView({ onComplete }: { onComplete: () => void }) {
           <h2 className="text-3xl font-bold tracking-tight">Nexus Access</h2>
           <p className="text-on-surface-variant text-sm mt-2">Initialize your engineering workspace</p>
         </div>
+
+        {error && (
+          <div className="mb-6 bg-error-container/10 border border-error/20 p-4 rounded-xl flex gap-3 text-error text-xs items-center animate-in fade-in slide-in-from-top-2">
+            <AlertCircle size={14} />
+            <div className="flex-1">{error}</div>
+            <button onClick={() => setError('')} className="opacity-50 hover:opacity-100">
+              <X size={14} />
+            </button>
+          </div>
+        )}
 
         <AnimatePresence mode="wait">
           {mode === 'initial' && (
@@ -158,12 +169,7 @@ export default function AuthView({ onComplete }: { onComplete: () => void }) {
                 </div>
               </div>
 
-              {error && (
-                <div className="bg-error-container/10 border border-error/20 p-4 rounded-xl flex gap-3 text-error text-xs items-center">
-                  <AlertCircle size={14} />
-                  {error}
-                </div>
-              )}
+
 
               <button 
                 type="submit"

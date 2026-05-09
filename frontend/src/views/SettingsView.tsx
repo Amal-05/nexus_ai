@@ -103,8 +103,7 @@ export default function SettingsView() {
                     <h3 className="text-xl font-bold text-white">{user?.displayName || 'Scholar'}</h3>
                     <p className="text-on-surface-variant text-sm">{user?.email}</p>
                     <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-3">
-                      <span className="px-2 py-1 rounded-md bg-secondary-container/30 text-secondary text-[10px] font-mono uppercase tracking-wider">Nexus Engineer</span>
-                      <span className="px-2 py-1 rounded-md bg-tertiary-container/30 text-tertiary text-[10px] font-mono uppercase tracking-wider">Level 4 Scholar</span>
+                      <span className="px-2 py-1 rounded-md bg-secondary-container/30 text-secondary text-[10px] font-mono uppercase tracking-wider">Scholar</span>
                     </div>
                   </div>
                 </div>
@@ -112,8 +111,8 @@ export default function SettingsView() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <InputGroup label="Full Name" defaultValue={user?.displayName || ''} />
                   <InputGroup label="Professional Bio" placeholder="AI Engineering Student..." />
-                  <InputGroup label="Institution" placeholder="Nexus Institute of Technology" />
-                  <InputGroup label="Primary Discipline" placeholder="Advanced Quantum Mechanics" />
+                  <InputGroup label="Institution" placeholder="Enter your institution..." />
+                  <InputGroup label="Primary Discipline" placeholder="Enter your discipline..." />
                 </div>
               </motion.div>
             )}

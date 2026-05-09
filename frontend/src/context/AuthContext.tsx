@@ -50,6 +50,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (result?.user) setUser(result.user);
     } catch (error) {
       console.error(error);
+      throw error;
     }
   };
 

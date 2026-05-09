@@ -55,27 +55,9 @@ export default function PlannerView({ onNavigate }: { onNavigate: (view: any) =>
                  </div>
 
                  <div className="space-y-4">
-                    <PlannerItem 
-                      time="09:00 - 11:30" 
-                      title="Review Lecture Notes" 
-                      subject="Module 1" 
-                      status="completed" 
-                      priority="High"
-                    />
-                    <PlannerItem 
-                      time="13:00 - 14:30" 
-                      title="AI Synthesis Session" 
-                      subject="General" 
-                      status="in-progress" 
-                      priority="Medium"
-                    />
-                    <PlannerItem 
-                      time="16:00 - 18:00" 
-                      title="Practice Question Bank" 
-                      subject="Self-Study" 
-                      status="upcoming" 
-                      priority="Urgent"
-                    />
+                     <div className="py-12 text-center opacity-30 italic text-sm">
+                        No planned sessions yet. Click "Plan Session" to begin.
+                     </div>
                  </div>
               </div>
 

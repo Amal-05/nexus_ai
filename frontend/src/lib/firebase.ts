@@ -22,7 +22,13 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-const isDummy = firebaseConfig.apiKey === "dummy-key";
+const isDummy = firebaseConfig.apiKey === "dummy-key" || !firebaseConfig.apiKey;
+
+if (isDummy) {
+  console.warn("Nexus AI: Firebase keys missing. Running in Mock Auth mode.");
+} else {
+  console.log("Nexus AI: Firebase initialized with project:", firebaseConfig.projectId);
+}
 
 const app = !isDummy && getApps().length === 0 ? initializeApp(firebaseConfig) : (getApps().length > 0 ? getApp() : null);
 

@@ -61,13 +61,13 @@ export default function DashboardView({ onNavigate }: { onNavigate: (view: any) 
           <div className="flex items-center justify-between mb-2">
             <div>
               <p className="text-[10px] font-mono font-bold text-on-surface-variant uppercase tracking-widest">AI Productivity Score</p>
-              <h3 className="text-4xl font-bold text-primary mt-1">88%</h3>
+              <h3 className="text-4xl font-bold text-primary mt-1">0%</h3>
             </div>
             <div className="w-16 h-16 rounded-full border-4 border-surface-container-highest flex items-center justify-center relative">
                <svg className="absolute inset-0 w-full h-full -rotate-90">
-                 <circle cx="32" cy="32" r="28" fill="transparent" stroke="currentColor" strokeWidth="4" className="text-primary" strokeDasharray="176" strokeDashoffset="21" />
+                 <circle cx="32" cy="32" r="28" fill="transparent" stroke="currentColor" strokeWidth="4" className="text-primary" strokeDasharray="176" strokeDashoffset="176" />
                </svg>
-               <span className="text-xs font-bold">A+</span>
+               <span className="text-xs font-bold">-</span>
             </div>
           </div>
           
@@ -76,18 +76,18 @@ export default function DashboardView({ onNavigate }: { onNavigate: (view: any) 
               <Flame className="text-secondary" size={24} />
             </div>
             <div>
-              <p className="text-[10px] font-mono font-bold text-on-surface-variant uppercase">7-Day Streak</p>
-              <p className="text-sm font-bold">Consistent Scholar</p>
+              <p className="text-[10px] font-mono font-bold text-on-surface-variant uppercase">0-Day Streak</p>
+              <p className="text-sm font-bold">Start Learning</p>
             </div>
           </div>
 
           <div>
             <div className="flex justify-between items-center mb-2">
               <span className="text-[10px] font-mono font-bold uppercase text-on-surface-variant">Weekly Goal</span>
-              <span className="text-[10px] font-mono font-bold text-tertiary">24/30 hrs</span>
+              <span className="text-[10px] font-mono font-bold text-tertiary">0/30 hrs</span>
             </div>
             <div className="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
-              <div className="h-full bg-tertiary w-[80%] rounded-full shadow-[0_0_10px_rgba(76,215,246,0.3)]" />
+              <div className="h-full bg-tertiary w-[0%] rounded-full shadow-[0_0_10px_rgba(76,215,246,0.3)]" />
             </div>
           </div>
         </div>
@@ -154,21 +154,9 @@ export default function DashboardView({ onNavigate }: { onNavigate: (view: any) 
               <Trophy size={18} className="text-primary" />
            </h4>
            <div className="space-y-6">
-              <MilestoneItem 
-                status="completed" 
-                title="Structural Analysis Module" 
-                desc="8 modules mastered via AI summaries." 
-              />
-              <MilestoneItem 
-                status="in-progress" 
-                title="Hydraulics Viva Prep" 
-                desc="Current progress: 65% of question bank." 
-              />
-              <MilestoneItem 
-                status="upcoming" 
-                title="Mid-Semester Mock Exam" 
-                desc="Scheduled for Friday, 10:00 AM" 
-              />
+              <div className="py-8 text-center opacity-30 italic text-xs">
+                No milestones yet. Complete modules to earn them.
+              </div>
            </div>
         </div>
       </section>
