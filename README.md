@@ -1,32 +1,28 @@
 <div align="center">
-
   
   # 🌌 Nexus AI
-  ### The Advanced Engineering Study OS
+  ### Your AI-Powered Study Assistant
   
   [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-blueviolet?style=for-the-badge&logo=vercel)](https://nexus-ai-phi.vercel.app/)
   [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
   [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
 
-  **Nexus AI** is a high-fidelity, futuristic engineering study assistant designed to transform complex documents into interactive learning experiences using Gemini 1.5 Pro.
+  **Nexus AI** is an intelligent assistant built for students to simplify learning. Upload your study materials to generate instant summaries, create interactive questionnaires, and prepare for exams faster.
 </div>
 
 <hr />
 
-## ✨ Key Features
+## ✨ Core Features
 
-- **🚀 AI Synthesis**: Transform complex technical PDFs and notes into structured executive summaries.
-- **🎙️ Viva Prep**: Practice technical oral exams with a real-time AI tutor and confidence meter.
-- **📅 Semester Planner**: Adaptive study roadmaps synchronized with your technical curriculum.
-- **🖼️ Diagram Explainer**: AI-powered visual analysis for technical schematics and blueprints.
-- **🧠 Question Bank**: Master technical concepts through AI-generated viva challenges.
+- **📝 AI Summarizer**: Instantly transform long lecture notes and PDFs into concise, easy-to-read summaries.
+- **❓ Question Bank**: Automatically generate questionnaires and flashcards from your study materials to test your knowledge.
+- **💬 AI Tutor**: Chat with an AI that understands your specific notes to clarify complex concepts.
+- **📅 Study Planner**: Keep track of your learning progress and organize your study sessions.
 
 ## 📁 Project Structure
 
-The project is structured as a monorepo for seamless deployment:
-
-- **[`/frontend`](./frontend)**: React 19 + Vite + Tailwind CSS v4 + Framer Motion.
-- **[`/backend`](./backend)**: Node.js + Express + Gemini 1.5 Pro.
+- **[`/frontend`](./frontend)**: The user interface built with React 19, Vite, and Tailwind CSS.
+- **[`/backend`](./backend)**: The AI server powered by Node.js and Gemini.
 
 ## 🚀 Getting Started
 
@@ -61,22 +57,10 @@ GEMINI_API_KEY=your_key
 npm run dev
 ```
 
-## 🌐 Deployment
-
-### Frontend (Vercel)
-1. Set **Root Directory** to `frontend`.
-2. Add environment variables with `VITE_` prefix.
-3. Build command: `npm run build`.
-
-### Backend (Render/Railway)
-1. Set **Root Directory** to `backend`.
-2. Add `GEMINI_API_KEY` to environment variables.
-3. Start command: `node index.js`.
-
 ---
 
 <div align="center">
-  <p>Built for the rigor of technical mastery. 🛠️</p>
+  <p>Helping students master their subjects with AI. 🎓</p>
   <a href="https://github.com/Amal-05/nexus_ai">
     <img src="https://img.shields.io/github/stars/Amal-05/nexus_ai?style=social" alt="Stars" />
   </a>
